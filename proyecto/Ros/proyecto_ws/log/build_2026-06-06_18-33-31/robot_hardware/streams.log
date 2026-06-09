@@ -1,0 +1,32 @@
+[1.314s] Invoking command in '/home/edu/CursoRobotica/proyecto/src/robot_hardware': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/edu/CursoRobotica/proyecto/build/robot_hardware/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/edu/CursoRobotica/proyecto/install/robot_hardware/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_hardware build --build-base /home/edu/CursoRobotica/proyecto/build/robot_hardware/build install --record /home/edu/CursoRobotica/proyecto/build/robot_hardware/install.log --single-version-externally-managed install_data
+[1.496s] running egg_info
+[1.496s] creating ../../build/robot_hardware/robot_hardware.egg-info
+[1.508s] writing ../../build/robot_hardware/robot_hardware.egg-info/PKG-INFO
+[1.508s] writing dependency_links to ../../build/robot_hardware/robot_hardware.egg-info/dependency_links.txt
+[1.508s] writing requirements to ../../build/robot_hardware/robot_hardware.egg-info/requires.txt
+[1.508s] writing top-level names to ../../build/robot_hardware/robot_hardware.egg-info/top_level.txt
+[1.508s] writing manifest file '../../build/robot_hardware/robot_hardware.egg-info/SOURCES.txt'
+[1.533s] reading manifest file '../../build/robot_hardware/robot_hardware.egg-info/SOURCES.txt'
+[1.533s] writing manifest file '../../build/robot_hardware/robot_hardware.egg-info/SOURCES.txt'
+[1.533s] running build
+[1.533s] running build_py
+[1.533s] creating /home/edu/CursoRobotica/proyecto/build/robot_hardware/build
+[1.533s] creating /home/edu/CursoRobotica/proyecto/build/robot_hardware/build/lib
+[1.533s] creating /home/edu/CursoRobotica/proyecto/build/robot_hardware/build/lib/robot_hardware
+[1.533s] copying robot_hardware/__init__.py -> /home/edu/CursoRobotica/proyecto/build/robot_hardware/build/lib/robot_hardware
+[1.534s] running install
+[1.537s] running install_lib
+[1.549s] creating /home/edu/CursoRobotica/proyecto/install/robot_hardware/lib/python3.12/site-packages/robot_hardware
+[1.549s] copying /home/edu/CursoRobotica/proyecto/build/robot_hardware/build/lib/robot_hardware/__init__.py -> /home/edu/CursoRobotica/proyecto/install/robot_hardware/lib/python3.12/site-packages/robot_hardware
+[1.550s] byte-compiling /home/edu/CursoRobotica/proyecto/install/robot_hardware/lib/python3.12/site-packages/robot_hardware/__init__.py to __init__.cpython-312.pyc
+[1.550s] running install_data
+[1.550s] creating /home/edu/CursoRobotica/proyecto/install/robot_hardware/share/ament_index
+[1.550s] creating /home/edu/CursoRobotica/proyecto/install/robot_hardware/share/ament_index/resource_index
+[1.550s] creating /home/edu/CursoRobotica/proyecto/install/robot_hardware/share/ament_index/resource_index/packages
+[1.550s] copying resource/robot_hardware -> /home/edu/CursoRobotica/proyecto/install/robot_hardware/share/ament_index/resource_index/packages
+[1.550s] copying package.xml -> /home/edu/CursoRobotica/proyecto/install/robot_hardware/share/robot_hardware
+[1.550s] running install_egg_info
+[1.563s] Copying ../../build/robot_hardware/robot_hardware.egg-info to /home/edu/CursoRobotica/proyecto/install/robot_hardware/lib/python3.12/site-packages/robot_hardware-0.0.0-py3.12.egg-info
+[1.563s] running install_scripts
+[1.646s] writing list of installed files to '/home/edu/CursoRobotica/proyecto/build/robot_hardware/install.log'
+[1.664s] Invoked command in '/home/edu/CursoRobotica/proyecto/src/robot_hardware' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/edu/CursoRobotica/proyecto/build/robot_hardware/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/edu/CursoRobotica/proyecto/install/robot_hardware/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_hardware build --build-base /home/edu/CursoRobotica/proyecto/build/robot_hardware/build install --record /home/edu/CursoRobotica/proyecto/build/robot_hardware/install.log --single-version-externally-managed install_data

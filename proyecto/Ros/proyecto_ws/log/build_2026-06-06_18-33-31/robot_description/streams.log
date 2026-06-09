@@ -1,0 +1,32 @@
+[1.602s] Invoking command in '/home/edu/CursoRobotica/proyecto/src/robot_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/edu/CursoRobotica/proyecto/build/robot_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/edu/CursoRobotica/proyecto/install/robot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_description build --build-base /home/edu/CursoRobotica/proyecto/build/robot_description/build install --record /home/edu/CursoRobotica/proyecto/build/robot_description/install.log --single-version-externally-managed install_data
+[1.923s] running egg_info
+[1.923s] creating ../../build/robot_description/robot_description.egg-info
+[1.949s] writing ../../build/robot_description/robot_description.egg-info/PKG-INFO
+[1.949s] writing dependency_links to ../../build/robot_description/robot_description.egg-info/dependency_links.txt
+[1.949s] writing requirements to ../../build/robot_description/robot_description.egg-info/requires.txt
+[1.950s] writing top-level names to ../../build/robot_description/robot_description.egg-info/top_level.txt
+[1.950s] writing manifest file '../../build/robot_description/robot_description.egg-info/SOURCES.txt'
+[2.001s] reading manifest file '../../build/robot_description/robot_description.egg-info/SOURCES.txt'
+[2.002s] writing manifest file '../../build/robot_description/robot_description.egg-info/SOURCES.txt'
+[2.002s] running build
+[2.003s] running build_py
+[2.003s] creating /home/edu/CursoRobotica/proyecto/build/robot_description/build
+[2.003s] creating /home/edu/CursoRobotica/proyecto/build/robot_description/build/lib
+[2.003s] creating /home/edu/CursoRobotica/proyecto/build/robot_description/build/lib/robot_description
+[2.003s] copying robot_description/__init__.py -> /home/edu/CursoRobotica/proyecto/build/robot_description/build/lib/robot_description
+[2.003s] running install
+[2.008s] running install_lib
+[2.035s] creating /home/edu/CursoRobotica/proyecto/install/robot_description/lib/python3.12/site-packages/robot_description
+[2.035s] copying /home/edu/CursoRobotica/proyecto/build/robot_description/build/lib/robot_description/__init__.py -> /home/edu/CursoRobotica/proyecto/install/robot_description/lib/python3.12/site-packages/robot_description
+[2.035s] byte-compiling /home/edu/CursoRobotica/proyecto/install/robot_description/lib/python3.12/site-packages/robot_description/__init__.py to __init__.cpython-312.pyc
+[2.036s] running install_data
+[2.036s] creating /home/edu/CursoRobotica/proyecto/install/robot_description/share/ament_index
+[2.036s] creating /home/edu/CursoRobotica/proyecto/install/robot_description/share/ament_index/resource_index
+[2.036s] creating /home/edu/CursoRobotica/proyecto/install/robot_description/share/ament_index/resource_index/packages
+[2.036s] copying resource/robot_description -> /home/edu/CursoRobotica/proyecto/install/robot_description/share/ament_index/resource_index/packages
+[2.037s] copying package.xml -> /home/edu/CursoRobotica/proyecto/install/robot_description/share/robot_description
+[2.037s] running install_egg_info
+[2.064s] Copying ../../build/robot_description/robot_description.egg-info to /home/edu/CursoRobotica/proyecto/install/robot_description/lib/python3.12/site-packages/robot_description-0.0.0-py3.12.egg-info
+[2.064s] running install_scripts
+[2.227s] writing list of installed files to '/home/edu/CursoRobotica/proyecto/build/robot_description/install.log'
+[2.258s] Invoked command in '/home/edu/CursoRobotica/proyecto/src/robot_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/edu/CursoRobotica/proyecto/build/robot_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/edu/CursoRobotica/proyecto/install/robot_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_description build --build-base /home/edu/CursoRobotica/proyecto/build/robot_description/build install --record /home/edu/CursoRobotica/proyecto/build/robot_description/install.log --single-version-externally-managed install_data
