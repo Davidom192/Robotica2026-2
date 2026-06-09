@@ -85,8 +85,8 @@ class PublicadorTrayectoria(Node):
 
     self.get_logger().info("Posición final juntas: {}".format
     (self.robot.th_m[:, self.robot.muestras - 1]))
-    #self.robot.imp_tray()
-    #self.robot.imp_junt()
+    self.robot.imp_tray()
+    self.robot.imp_junt()
     # Publicando trayectoria de las juntas
     self.current_pos = 0
     self.timer_pub = self.create_timer(self.robot.dt,self.timer_pub_callback)

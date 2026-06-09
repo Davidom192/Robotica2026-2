@@ -1,0 +1,21 @@
+[0.994s] Invoking command in '/home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/src/robot_hardware': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/build/robot_hardware/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/install/robot_hardware/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_hardware build --build-base /home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/build/robot_hardware/build install --record /home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/build/robot_hardware/install.log --single-version-externally-managed install_data
+[1.187s] running egg_info
+[1.200s] writing ../../build/robot_hardware/robot_hardware.egg-info/PKG-INFO
+[1.200s] writing dependency_links to ../../build/robot_hardware/robot_hardware.egg-info/dependency_links.txt
+[1.201s] writing entry points to ../../build/robot_hardware/robot_hardware.egg-info/entry_points.txt
+[1.201s] writing requirements to ../../build/robot_hardware/robot_hardware.egg-info/requires.txt
+[1.201s] writing top-level names to ../../build/robot_hardware/robot_hardware.egg-info/top_level.txt
+[1.228s] reading manifest file '../../build/robot_hardware/robot_hardware.egg-info/SOURCES.txt'
+[1.229s] writing manifest file '../../build/robot_hardware/robot_hardware.egg-info/SOURCES.txt'
+[1.229s] running build
+[1.229s] running build_py
+[1.229s] running install
+[1.233s] running install_lib
+[1.247s] running install_data
+[1.247s] running install_egg_info
+[1.262s] removing '/home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/install/robot_hardware/lib/python3.12/site-packages/robot_hardware-0.0.0-py3.12.egg-info' (and everything under it)
+[1.262s] Copying ../../build/robot_hardware/robot_hardware.egg-info to /home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/install/robot_hardware/lib/python3.12/site-packages/robot_hardware-0.0.0-py3.12.egg-info
+[1.262s] running install_scripts
+[1.351s] Installing robot_hardware script to /home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/install/robot_hardware/lib/robot_hardware
+[1.351s] writing list of installed files to '/home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/build/robot_hardware/install.log'
+[1.394s] Invoked command in '/home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/src/robot_hardware' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/build/robot_hardware/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/install/robot_hardware/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_hardware build --build-base /home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/build/robot_hardware/build install --record /home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/build/robot_hardware/install.log --single-version-externally-managed install_data

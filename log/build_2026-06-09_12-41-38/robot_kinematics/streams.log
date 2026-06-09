@@ -1,0 +1,43 @@
+[0.970s] Invoking command in '/home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/src/robot_kinematics': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/robotics/Robotica2026-2/build/robot_kinematics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robotics/Robotica2026-2/install/robot_kinematics/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../../build/robot_kinematics build --build-base /home/robotics/Robotica2026-2/build/robot_kinematics/build install --record /home/robotics/Robotica2026-2/build/robot_kinematics/install.log --single-version-externally-managed install_data
+[1.211s] running egg_info
+[1.211s] creating ../../../../../build/robot_kinematics/robot_kinematics.egg-info
+[1.240s] writing ../../../../../build/robot_kinematics/robot_kinematics.egg-info/PKG-INFO
+[1.240s] writing dependency_links to ../../../../../build/robot_kinematics/robot_kinematics.egg-info/dependency_links.txt
+[1.240s] writing entry points to ../../../../../build/robot_kinematics/robot_kinematics.egg-info/entry_points.txt
+[1.240s] writing requirements to ../../../../../build/robot_kinematics/robot_kinematics.egg-info/requires.txt
+[1.241s] writing top-level names to ../../../../../build/robot_kinematics/robot_kinematics.egg-info/top_level.txt
+[1.241s] writing manifest file '../../../../../build/robot_kinematics/robot_kinematics.egg-info/SOURCES.txt'
+[1.306s] reading manifest file '../../../../../build/robot_kinematics/robot_kinematics.egg-info/SOURCES.txt'
+[1.307s] writing manifest file '../../../../../build/robot_kinematics/robot_kinematics.egg-info/SOURCES.txt'
+[1.307s] running build
+[1.307s] running build_py
+[1.307s] creating /home/robotics/Robotica2026-2/build/robot_kinematics/build
+[1.308s] creating /home/robotics/Robotica2026-2/build/robot_kinematics/build/lib
+[1.308s] creating /home/robotics/Robotica2026-2/build/robot_kinematics/build/lib/robot_kinematics
+[1.308s] copying robot_kinematics/__init__.py -> /home/robotics/Robotica2026-2/build/robot_kinematics/build/lib/robot_kinematics
+[1.308s] copying robot_kinematics/robot_trajectory_publisher.py -> /home/robotics/Robotica2026-2/build/robot_kinematics/build/lib/robot_kinematics
+[1.308s] copying robot_kinematics/kinematics.py -> /home/robotics/Robotica2026-2/build/robot_kinematics/build/lib/robot_kinematics
+[1.308s] copying robot_kinematics/robot_final_pos_publisher.py -> /home/robotics/Robotica2026-2/build/robot_kinematics/build/lib/robot_kinematics
+[1.308s] running install
+[1.315s] running install_lib
+[1.349s] creating /home/robotics/Robotica2026-2/install/robot_kinematics/lib/python3.12/site-packages/robot_kinematics
+[1.349s] copying /home/robotics/Robotica2026-2/build/robot_kinematics/build/lib/robot_kinematics/__init__.py -> /home/robotics/Robotica2026-2/install/robot_kinematics/lib/python3.12/site-packages/robot_kinematics
+[1.349s] copying /home/robotics/Robotica2026-2/build/robot_kinematics/build/lib/robot_kinematics/robot_trajectory_publisher.py -> /home/robotics/Robotica2026-2/install/robot_kinematics/lib/python3.12/site-packages/robot_kinematics
+[1.349s] copying /home/robotics/Robotica2026-2/build/robot_kinematics/build/lib/robot_kinematics/kinematics.py -> /home/robotics/Robotica2026-2/install/robot_kinematics/lib/python3.12/site-packages/robot_kinematics
+[1.349s] copying /home/robotics/Robotica2026-2/build/robot_kinematics/build/lib/robot_kinematics/robot_final_pos_publisher.py -> /home/robotics/Robotica2026-2/install/robot_kinematics/lib/python3.12/site-packages/robot_kinematics
+[1.350s] byte-compiling /home/robotics/Robotica2026-2/install/robot_kinematics/lib/python3.12/site-packages/robot_kinematics/__init__.py to __init__.cpython-312.pyc
+[1.350s] byte-compiling /home/robotics/Robotica2026-2/install/robot_kinematics/lib/python3.12/site-packages/robot_kinematics/robot_trajectory_publisher.py to robot_trajectory_publisher.cpython-312.pyc
+[1.351s] byte-compiling /home/robotics/Robotica2026-2/install/robot_kinematics/lib/python3.12/site-packages/robot_kinematics/kinematics.py to kinematics.cpython-312.pyc
+[1.354s] byte-compiling /home/robotics/Robotica2026-2/install/robot_kinematics/lib/python3.12/site-packages/robot_kinematics/robot_final_pos_publisher.py to robot_final_pos_publisher.cpython-312.pyc
+[1.355s] running install_data
+[1.355s] creating /home/robotics/Robotica2026-2/install/robot_kinematics/share/ament_index
+[1.355s] creating /home/robotics/Robotica2026-2/install/robot_kinematics/share/ament_index/resource_index
+[1.355s] creating /home/robotics/Robotica2026-2/install/robot_kinematics/share/ament_index/resource_index/packages
+[1.355s] copying resource/robot_kinematics -> /home/robotics/Robotica2026-2/install/robot_kinematics/share/ament_index/resource_index/packages
+[1.355s] copying package.xml -> /home/robotics/Robotica2026-2/install/robot_kinematics/share/robot_kinematics
+[1.355s] running install_egg_info
+[1.389s] Copying ../../../../../build/robot_kinematics/robot_kinematics.egg-info to /home/robotics/Robotica2026-2/install/robot_kinematics/lib/python3.12/site-packages/robot_kinematics-0.0.0-py3.12.egg-info
+[1.390s] running install_scripts
+[1.513s] Installing trajectory_publisher script to /home/robotics/Robotica2026-2/install/robot_kinematics/lib/robot_kinematics
+[1.513s] writing list of installed files to '/home/robotics/Robotica2026-2/build/robot_kinematics/install.log'
+[1.537s] Invoked command in '/home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/src/robot_kinematics' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/robotics/Robotica2026-2/build/robot_kinematics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robotics/Robotica2026-2/install/robot_kinematics/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../../build/robot_kinematics build --build-base /home/robotics/Robotica2026-2/build/robot_kinematics/build install --record /home/robotics/Robotica2026-2/build/robot_kinematics/install.log --single-version-externally-managed install_data
