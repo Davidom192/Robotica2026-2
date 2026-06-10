@@ -1,33 +1,26 @@
 <?xml version="1.0"?>
-<robot name="robot_rrr" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="robot_rrr">
 
-  <!-- ===================== BASE ===================== -->
   <link name="base_link">
     <visual>
       <geometry>
-        <box size="0.2 0.2 0.05"/>
+        <cylinder radius="0.15" length="0.05"/>
       </geometry>
       <origin xyz="0 0 -0.025"/>
-      <material name="purple">
-        <color rgba="0.25 0 0.6 1"/>
+      <material name="yellow">
+        <color rgba="0.9 0.9 0 1"/>
       </material>
     </visual>
   </link>
 
-  <!-- ===================== SHOULDER ===================== -->
-  <!--
-    shoulder_joint: rotación en Z (yaw = th1)
-    → apunta el plano vertical del brazo hacia el objetivo XY
-    Origen: (0, 0, 0) en base_link
-  -->
   <link name="shoulder_link">
     <visual>
-      <origin xyz="0 0 0.075"/>
+      <origin xyz="0 0 0.085"/>
       <geometry>
-        <box size="0.05 0.05 0.15"/>
+        <box size="0.05 0.05 0.17"/>
       </geometry>
       <material name="green">
-        <color rgba="0 0.5 0 1"/>
+        <color rgba="0 0.8 0 1"/>
       </material>
     </visual>
   </link>
@@ -41,65 +34,11 @@
     <dynamics damping="0.1"/>
   </joint>
 
-  <!-- ===================== ARM ===================== -->
-  <!--
-    arm_joint: rotación en Y (pitch = th2)
-    → inclina el brazo en el plano vertical apuntado por th1
-    Origen: (0, 0, 0.15) en shoulder_link  [l1 = 0.15 m]
-  -->
   <link name="arm_link">
     <visual>
-      <origin xyz="0 0 0.15"/>
+      <origin xyz="0 0 0.115"/>
       <geometry>
-        <box size="0.05 0.05 0.30"/>
-      </geometry>
-      <material name="red">
-        <color rgba="0.6 0 0 1"/>
-      </material>
-    </visual>
-  </link>
-
-  <joint name="arm_joint" type="revolute">
-    <parent link="shoulder_link"/>
-    <child link="arm_link"/>
-    <origin xyz="0 0 0.15" rpy="0 0 0"/>
-    <axis xyz="0 1 0"/>
-    <limit lower="-1.57" upper="1.57" effort="10" velocity="1"/>
-    <dynamics damping="0.1"/>
-  </joint>
-
-  <!-- ===================== FOREARM ===================== -->
-  <!--
-    forearm_joint: rotación en Y (pitch = th3)
-    → inclina el antebrazo relativo al brazo
-    Origen: (0, 0, 0.30) en arm_link  [l2 = 0.30 m]
-  -->
-  <link name="forearm_link">
-    <visual>
-      <origin xyz="0 0 0.225"/>
-      <geometry>
-        <box size="0.05 0.05 0.45"/>
-      </geometry>
-      <material name="orange">
-        <color rgba="0.8 0.4 0 1"/>
-      </material>
-    </visual>
-  </link>
-
-  <joint name="forearm_joint" type="revolute">
-    <parent link="arm_link"/>
-    <child link="forearm_link"/>
-    <origin xyz="0 0 0.30" rpy="0 0 0"/>
-    <axis xyz="0 1 0"/>
-    <limit lower="-1.57" upper="1.57" effort="10" velocity="1"/>
-    <dynamics damping="0.1"/>
-  </joint>
-
-  <!-- ===================== END EFFECTOR (visual) ===================== -->
-  <link name="end_effector_link">
-    <visual>
-      <geometry>
-        <sphere radius="0.03"/>
+        <box size="0.05 0.05 0.23"/>
       </geometry>
       <material name="white">
         <color rgba="1 1 1 1"/>
@@ -107,10 +46,49 @@
     </visual>
   </link>
 
+  <joint name="arm_joint" type="revolute">
+    <parent link="shoulder_link"/>
+    <child link="arm_link"/>
+    <origin xyz="0 0 0.17" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="1"/>
+    <dynamics damping="0.1"/>
+  </joint>
+
+  <link name="forearm_link">
+    <visual>
+      <origin xyz="0 0 0.185"/>
+      <geometry>
+        <box size="0.05 0.05 0.37"/>
+      </geometry>
+      <material name="red_forearm">
+        <color rgba="0.8 0 0 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="forearm_joint" type="revolute">
+    <parent link="arm_link"/>
+    <child link="forearm_link"/>
+    <origin xyz="0 0 0.23" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="1"/>
+    <dynamics damping="0.1"/>
+  </joint>
+
+  <link name="end_effector_link">
+    <visual>
+      <geometry>
+        <sphere radius="0.04"/>
+      </geometry>
+      <material name="yellow"/>
+    </visual>
+  </link>
+
   <joint name="end_effector_joint" type="fixed">
     <parent link="forearm_link"/>
     <child link="end_effector_link"/>
-    <origin xyz="0 0 0.45" rpy="0 0 0"/>  <!-- l3 = 0.45 m -->
+    <origin xyz="0 0 0.37" rpy="0 0 0"/>
   </joint>
 
 </robot>

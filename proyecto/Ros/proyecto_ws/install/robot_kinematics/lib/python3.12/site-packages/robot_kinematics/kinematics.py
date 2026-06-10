@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import math
 
 class Robot():
-  def __init__(self, l:tuple[float]=(0.15, 0.30, 0.45)):
+  def __init__(self, l:tuple[float]=(0.17, 0.23, 0.37)): #67#
     th1, th2, th3 = symbols("theta_1,theta_2,theta_3")
 
     h = l[0]
@@ -66,7 +66,7 @@ class Robot():
                th_i:tuple[float]=(0.1, 0.1, 0.1), 
                xi_f:tuple[float]=(0.6, 0.1, 0.0)):
     
-    # 1. TRADUCIR ángulos del URDF de vuelta a la matemática pura
+    # 1. TRADUCIR ángulos del URDF de vuelta a la matemática
     th1_math = th_i[0]
     th2_math = (math.pi / 2) - th_i[1]
     th3_math = -th_i[2]
@@ -76,12 +76,11 @@ class Robot():
         self.th1: th1_math, 
         self.th2: th2_math, 
         self.th3: th3_math
-    }).evalf() # evalf() asegura que sea un número flotante y no una fracción simbólica
+    }).evalf()
     
     self.dt = 1.0/frec
     self.muestras = int(t_f * frec) + 1 
 
-    # ... (El resto del código hacia abajo se queda exactamente igual)
     eq1 = self.lam.subs({self.t: 0})
     eq2 = self.lam.subs({self.t: t_f}) - 1
     eq3 = self.lam_dot.subs({self.t: 0})
@@ -113,13 +112,12 @@ class Robot():
       xi_dot_m[:, i]     = xi_dot_eq.subs({self.t: t_m[i]})
       xi_dot_dot_m[:, i] = xi_dot_dot_eq.subs({self.t: t_m[i]})
     
-    # ---- Cinemática Inversa Analítica Exacta ----
+    # Cinemática Inversa
     th_m = Matrix.zeros(3, self.muestras)
     for i in range(self.muestras):
-        # En lugar del Jacobiano, calculamos el punto exacto garantizando precisión absoluta
         th_m[:, i] = self.inv_kin_exacta(float(xi_m[0, i]), float(xi_m[1, i]), float(xi_m[2, i]))
     
-    # Derivadas numéricas (Diferencias finitas) para completar tu estructura
+    # Derivadas numéricas (Diferencias finitas)
     th_dot_m     = Matrix.zeros(3, self.muestras)
     th_dot_dot_m = Matrix.zeros(3, self.muestras)
     
@@ -136,53 +134,56 @@ class Robot():
     self.xi_m = xi_m; self.xi_dot_m = xi_dot_m; self.xi_dot_dot_m = xi_dot_dot_m
     self.th_m = th_m; self.th_dot_m = th_dot_m; self.th_dot_dot_m = th_dot_dot_m
     self.t_m = t_m
+    
+    # Guardar arreglo de tiempo en el formato que espera el plot de referencia
+    self.t_arr = [float(t_m[0, i]) for i in range(self.muestras)]
+
+  # Graficación 
+  def _plot3(self, title, labels, data):
+      fig, axes = plt.subplots(1, 3, figsize=(13, 4))
+      fig.suptitle(title)
+      for ax, lbl, col, row in zip(axes, labels,
+                                    ["red", "green", "blue"],
+                                    range(3)):
+          ax.set_title(lbl)
+          
+          # Extraer datos y forzar visualización si el valor es constante (Ej. Z=0)
+          y_vals = [float(data[row, i]) for i in range(self.muestras)]
+          ax.plot(self.t_arr, y_vals, color=col)
+          ax.set_xlabel("t (s)")
+          
+          if max(y_vals) - min(y_vals) < 0.01:
+              ax.set_ylim(min(y_vals) - 0.1, max(y_vals) + 0.1)
+
+      plt.tight_layout()
+      plt.show() # <-- Uso del plt.show() bloqueante igual que en la referencia
 
   def imp_tray(self):
-    fig, (x_g, y_g, z_g) = plt.subplots(nrows = 1, ncols = 3, figsize=(10, 3))
-    fig.suptitle("Posiciones del efector final")
-    
-    # Extraer valores numéricos
-    t_vals = [float(v) for v in self.t_m]
-    x_vals = [float(v) for v in self.xi_m[0, :]]
-    y_vals = [float(v) for v in self.xi_m[1, :]]
-    z_vals = [float(v) for v in self.xi_m[2, :]]
+      self._plot3("Posiciones del Efector Final",
+                  ["x (m)", "y (m)", "z (m)"],
+                  self.xi_m)
 
-    x_g.set_title("x")
-    x_g.plot(t_vals, x_vals, color="red", linewidth=2)
-    
-    y_g.set_title("y")
-    y_g.plot(t_vals, y_vals, color="green", linewidth=2)
-    
-    z_g.set_title("z")
-    z_g.plot(t_vals, z_vals, color="blue", linewidth=2)
-    
-    # Si la línea es totalmente plana, forzamos los límites para verla
-    if max(z_vals) - min(z_vals) < 0.01:
-        z_g.set_ylim(-0.1, 0.1)
+  def imp_vel(self):
+      self._plot3("Velocidades del Efector Final",
+                  ["x_dot", "y_dot", "z_dot"],
+                  self.xi_dot_m)
 
-    plt.tight_layout()
-    plt.show(block=False)
-    plt.pause(0.01)
+  def imp_acc(self):
+      self._plot3("Aceleraciones del Efector Final",
+                  ["x_ddot", "y_ddot", "z_ddot"],
+                  self.xi_dot_dot_m)
 
   def imp_junt(self):
-    fig, (th1_g, th2_g, th3_g) = plt.subplots(nrows = 1, ncols = 3, figsize=(10, 3))
-    fig.suptitle("Posiciones de las juntas")
-    
-    # Extraer valores numéricos
-    t_vals = [float(v) for v in self.t_m]
-    th1_vals = [float(v) for v in self.th_m[0, :]]
-    th2_vals = [float(v) for v in self.th_m[1, :]]
-    th3_vals = [float(v) for v in self.th_m[2, :]]
+      self._plot3("Posiciones de las juntas",
+                  ["th1", "th2", "th3"],
+                  self.th_m)
 
-    th1_g.set_title("th1")
-    th1_g.plot(t_vals, th1_vals, color="red", linewidth=2)
-    
-    th2_g.set_title("th2")
-    th2_g.plot(t_vals, th2_vals, color="green", linewidth=2)
-    
-    th3_g.set_title("th3")
-    th3_g.plot(t_vals, th3_vals, color="blue", linewidth=2)
+  def imp_junt_vel(self):
+      self._plot3("Velocidades de juntas",
+                  ["th1_dot", "th2_dot", "th3_dot"],
+                  self.th_dot_m)
 
-    plt.tight_layout()
-    plt.show(block=False)
-    plt.pause(0.01)
+  def imp_junt_acc(self):
+      self._plot3("Aceleraciones de juntas",
+                  ["th1_ddot", "th2_ddot", "th3_ddot"],
+                  self.th_dot_dot_m)
