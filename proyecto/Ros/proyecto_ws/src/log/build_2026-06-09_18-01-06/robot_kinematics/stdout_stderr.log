@@ -1,0 +1,23 @@
+running egg_info
+writing ../build/robot_kinematics/robot_kinematics.egg-info/PKG-INFO
+writing dependency_links to ../build/robot_kinematics/robot_kinematics.egg-info/dependency_links.txt
+writing entry points to ../build/robot_kinematics/robot_kinematics.egg-info/entry_points.txt
+writing requirements to ../build/robot_kinematics/robot_kinematics.egg-info/requires.txt
+writing top-level names to ../build/robot_kinematics/robot_kinematics.egg-info/top_level.txt
+reading manifest file '../build/robot_kinematics/robot_kinematics.egg-info/SOURCES.txt'
+writing manifest file '../build/robot_kinematics/robot_kinematics.egg-info/SOURCES.txt'
+running build
+running build_py
+copying robot_kinematics/robot_trajectory_publisher.py -> /home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/src/build/robot_kinematics/build/lib/robot_kinematics
+copying robot_kinematics/kinematics.py -> /home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/src/build/robot_kinematics/build/lib/robot_kinematics
+running install
+running install_lib
+byte-compiling /home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/src/install/robot_kinematics/lib/python3.12/site-packages/robot_kinematics/robot_trajectory_publisher.py to robot_trajectory_publisher.cpython-312.pyc
+byte-compiling /home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/src/install/robot_kinematics/lib/python3.12/site-packages/robot_kinematics/kinematics.py to kinematics.cpython-312.pyc
+running install_data
+running install_egg_info
+removing '/home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/src/install/robot_kinematics/lib/python3.12/site-packages/robot_kinematics-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../build/robot_kinematics/robot_kinematics.egg-info to /home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/src/install/robot_kinematics/lib/python3.12/site-packages/robot_kinematics-0.0.0-py3.12.egg-info
+running install_scripts
+Installing trajectory_publisher script to /home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/src/install/robot_kinematics/lib/robot_kinematics
+writing list of installed files to '/home/robotics/Robotica2026-2/proyecto/Ros/proyecto_ws/src/build/robot_kinematics/install.log'
